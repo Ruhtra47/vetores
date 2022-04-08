@@ -1,0 +1,21 @@
+v = sqrt(vx * vx + vy * vy);
+
+    if (vx == 0)
+    {
+        if (vy > 0)
+        {
+            angulo = 90;
+        }
+        else if (vy < 0)
+        {
+            angulo = 270;
+        }
+
+        return;
+    }
+
+    bool b = false;
+    if (vx < 0)
+        b = true;
+
+    angulo = atan(vy / vx) + b * 180;
